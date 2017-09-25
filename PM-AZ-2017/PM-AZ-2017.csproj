@@ -141,11 +141,45 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Graphics\Logos\Favicons\manifest.json" />
+    <Content Include="Graphics\Logos\PeterMartinez-Logo.pdn" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Graphics\Logos\Favicons\android-icon-144x144.png" />
+    <Content Include="Graphics\Logos\Favicons\android-icon-192x192.png" />
+    <Content Include="Graphics\Logos\Favicons\android-icon-36x36.png" />
+    <Content Include="Graphics\Logos\Favicons\android-icon-48x48.png" />
+    <Content Include="Graphics\Logos\Favicons\android-icon-72x72.png" />
+    <Content Include="Graphics\Logos\Favicons\android-icon-96x96.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon-114x114.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon-120x120.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon-144x144.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon-152x152.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon-180x180.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon-57x57.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon-60x60.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon-72x72.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon-76x76.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon-precomposed.png" />
+    <Content Include="Graphics\Logos\Favicons\apple-icon.png" />
+    <Content Include="Graphics\Logos\Favicons\browserconfig.xml" />
+    <Content Include="Graphics\Logos\Favicons\favicon-16x16.png" />
+    <Content Include="Graphics\Logos\Favicons\favicon-32x32.png" />
+    <Content Include="Graphics\Logos\Favicons\favicon-96x96.png" />
+    <Content Include="Graphics\Logos\Favicons\favicon.ico" />
+    <Content Include="Graphics\Logos\Favicons\ms-icon-144x144.png" />
+    <Content Include="Graphics\Logos\Favicons\ms-icon-150x150.png" />
+    <Content Include="Graphics\Logos\Favicons\ms-icon-310x310.png" />
+    <Content Include="Graphics\Logos\Favicons\ms-icon-70x70.png" />
+    <Content Include="Graphics\Logos\PeterMartinez-Logo-Tiny.png" />
+    <Content Include="Graphics\Logos\PeterMartinez-Logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jquery-ui.theme.min.css" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -213,12 +247,14 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -226,6 +262,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Graphics\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
