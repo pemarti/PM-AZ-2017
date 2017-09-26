@@ -58,15 +58,6 @@ namespace PM_AZ_2017 {
         protected global::System.Web.UI.WebControls.TextBox textboxCompany;
         
         /// <summary>
-        /// rfvCompany control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCompany;
-        
-        /// <summary>
         /// labelEmail control.
         /// </summary>
         /// <remarks>
@@ -94,6 +85,33 @@ namespace PM_AZ_2017 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
         
         /// <summary>
+        /// labelTelephone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelTelephone;
+        
+        /// <summary>
+        /// textboxPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textboxPhone;
+        
+        /// <summary>
+        /// labelComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelComment;
+        
+        /// <summary>
         /// textboxComment control.
         /// </summary>
         /// <remarks>
@@ -103,6 +121,24 @@ namespace PM_AZ_2017 {
         protected global::System.Web.UI.WebControls.TextBox textboxComment;
         
         /// <summary>
+        /// rfvComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvComment;
+        
+        /// <summary>
+        /// vsMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsMessage;
+        
+        /// <summary>
         /// buttonSubmit control.
         /// </summary>
         /// <remarks>
@@ -110,5 +146,14 @@ namespace PM_AZ_2017 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button buttonSubmit;
+        
+        /// <summary>
+        /// literalThankYou control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal literalThankYou;
     }
 }
