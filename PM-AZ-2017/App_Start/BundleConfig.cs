@@ -41,6 +41,23 @@ namespace PM_AZ_2017
                     Path = "~/Scripts/respond.min.js",
                     DebugPath = "~/Scripts/respond.js",
                 });
+
+            ScriptManager.ScriptResourceMapping.AddDefinition(
+                "jquery-ui",
+                new ScriptResourceDefinition
+                {
+                    Path= "~/Scripts/jquery-ui.min.js",
+                    DebugPath = "~/Scripts/jquery-ui.js",
+                });
+
+            ScriptManager.ScriptResourceMapping.AddDefinition(
+                "parallax",
+                new ScriptResourceDefinition
+                {
+                    Path = "~/Scripts/parallax.js-1.4.2/parallax.min.js",
+                    DebugPath = "~/Scripts/parallax.js-1.4.2/parallax.js",
+                });
+
         }
     }
 }

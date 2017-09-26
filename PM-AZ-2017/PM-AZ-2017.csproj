@@ -141,6 +141,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Graphics\Images\Sky-PixaBay-414199.jpg" />
+    <Content Include="Graphics\Images\Sky.jpg" />
+    <Content Include="Graphics\Images\Sky.png" />
     <Content Include="Graphics\Logos\Favicons\manifest.json" />
     <Content Include="Graphics\Logos\PeterMartinez-Logo.pdn" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -172,6 +175,8 @@
     <Content Include="Graphics\Logos\Favicons\ms-icon-70x70.png" />
     <Content Include="Graphics\Logos\PeterMartinez-Logo-Tiny.png" />
     <Content Include="Graphics\Logos\PeterMartinez-Logo.png" />
+    <Content Include="Graphics\ColorPalette-color-hex.com.png" />
+    <Content Include="Graphics\Video\Sky-PixABay-3186.mp4" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -181,6 +186,8 @@
     <Content Include="Scripts\jquery-ui.structure.min.css" />
     <Content Include="Scripts\jquery-ui.theme.min.css" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\parallax.js-1.4.2\parallax.js" />
+    <Content Include="Scripts\parallax.js-1.4.2\parallax.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
@@ -209,6 +216,9 @@
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="Scripts\parallax.js-1.4.2\bower.json" />
+    <Content Include="Scripts\parallax.js-1.4.2\LICENSE" />
+    <Content Include="Scripts\parallax.js-1.4.2\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -262,7 +272,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Graphics\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

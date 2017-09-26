@@ -22,10 +22,124 @@ textarea {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
-        margin-top: 20px;
+        /*margin-top: 20px;*/
+        padding-left: 55px;
+        padding-right: 55px;
     }
 
     .body-content {
         padding: 0;
     }
+}
+
+
+
+/* Custom CSS added to the Project */
+
+/* Home Page Banner Image*/
+.parallax-window {
+    clear: both;
+    width: 100%;
+    min-height: 440px;
+    background: transparent;
+    background-position: center top;
+}
+
+
+/* Custom Header/Menu */
+.navbar-inverse {
+    background-color: rgba(255, 255, 255, 0.58);
+    border-color: transparent;
+    height: 55px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #0E1A40;
+    font-size: 1.25em;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #00FF83;
+}
+
+
+/* Headings */
+h1.underlinedScript {
+    color: #222F5B;
+    font-family: 'Freestyle Script';
+    font-size: 3.25em;
+    border-bottom: 2px dotted #222F5B;
+}
+
+h2.underlinedScript {
+    color: #222F5B;
+    font-family: 'Freestyle Script';
+    font-size: 2.50em;
+    /*border-bottom: 2px dotted #222F5B;*/
+}
+
+h3.underlinedScript {
+    color: #222F5B;
+    font-family: 'Freestyle Script';
+    font-size: 1.75em;
+    /*border-bottom: 1px dotted #222F5B;*/
+}
+
+hr.dottedLine {
+    color: #222F5B;
+    border-width: thin;
+    border-bottom-style: dotted;
+}
+
+/* Custom Page Size */
+.narrowPage {
+    margin: auto;
+    max-width: 1024px;
+}
+
+/* Custom Horizontal Rows */
+.grey-stripe {
+    background-color: #eeeeee;
+    padding: 25px 15px 25px 15px;
+    border-radius: 10px 10px;
+}
+
+.white-stripe {
+    background-color: transparent;
+    padding: 25px 5px 25px 5px;
+}
+
+/* Custom List - Checkmarks*/
+ul.checkMark li {
+    display:block;
+}
+
+ul.checkMark li:before {
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e013";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+    color: #222F5B;
+}
+
+/* Custom Anchor Position */
+a.anchor {
+    display: block;
+    position: relative;
+    top: -180px;
+    visibility: hidden;
+}
+
+/* Custom Form Controls */
+.formBlue {
+    color: #222F5B;
+    font-size: 1.25em;
+}
+
+input.form-control {
+    margin-bottom: 25px;
+    font-style: italic;
 }

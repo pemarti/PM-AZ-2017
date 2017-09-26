@@ -13,7 +13,9 @@
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Graphics/Logos/Favicons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Graphics/Logos/Favicons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <%--<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />--%>
 
 </head>
 <body>
@@ -26,6 +28,8 @@
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
                 <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="jquery-ui" />
+                <asp:ScriptReference Name="parallax" />
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
                 <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
@@ -47,23 +51,26 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/"><img id="imageLogo" src="Graphics/Logos/PeterMartinez-Logo-Medium.png" /></a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="#About">About</a></li>
+                        <li><a runat="server" href="#Education">Education</a></li>
+                        <li><a runat="server" href="#EmploymentExperience">Employment Experience</a></li>
+                        <li><a runat="server" href="#ProjectExperience">Project Experience</a></li>
+                        <li><a runat="server" href="#Skills">Skills</a></li>
+                        <li><a runat="server" href="#Contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container body-content">
+        <div class="container-fluid body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            <footer class="narrowPage">
+                <p style="text-align:center;">&copy; <%: DateTime.Now.Year %> - Peter Martinez - Tempe, AZ</p>
             </footer>
         </div>
 
