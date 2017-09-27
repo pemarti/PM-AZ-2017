@@ -34,6 +34,7 @@ namespace PM_AZ_2017
                     displayThankYou();
              }
         }
+
         protected void displayThankYou()
         {
             StringBuilder sbThankYou = new StringBuilder();
@@ -44,6 +45,9 @@ namespace PM_AZ_2017
             sbThankYou.Append("</div>");
             literalThankYou.Text = sbThankYou.ToString();
             literalThankYou.Visible = true;
+            contactForm.Visible = false;
+            //ClientScript.RegisterStartupScript(GetType(), "ScrollScript", "document.getElementById('placeholder').scrollIntoVie‌​w(true)", true);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "scrollToBottom()", true);
         }
     }
 }

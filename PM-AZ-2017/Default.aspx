@@ -11,10 +11,22 @@
                 $('#imageLogo').attr('height', '95');
             }
         });
+
+        function scrollToBottom() {
+            document.getElementsByClassName('thankyouMessage')[0].scrollIntoView(false);
+            //document.getElementById('imgicon').scrollIntoView(false);
+            //elmnt.scrollIntoView(true); // Bottom
+        }
     </script>
 
     <div><br /></div>
-    <div class="parallax-window" data-parallax="scroll" data-image-src="/Graphics/Images/sky-414199.jpg"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="/Graphics/Images/sky-414199.jpg">
+        <div class="col-md-12">
+            <div class="overlayText">
+                Hello World!
+            </div>
+        </div>
+    </div>
     <div class="jumbotron">
         <h1 class="underlinedScript">Peter Martinez</h1>
         <h3 class="underlinedScript">Interactive Resume</h3>
@@ -141,44 +153,48 @@
         <div class="row grey-stripe">
             <div class="narrowMargin">
                 <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4>Peter Martinez &nbsp; <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> &nbsp; <a href="mailto:peter@gb2gitsolutions.com" class="hyperlinkReverseColors">peter@gb2gitsolutions.com</a> &nbsp; <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> &nbsp; <a href="tel:1+6024196893" class="hyperlinkReverseColors">602.419.6893</a></h4>
+                    <div id="contactForm" runat="server">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Peter Martinez &nbsp; <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> &nbsp; <a href="mailto:peter@gb2gitsolutions.com" class="hyperlinkReverseColors">peter@gb2gitsolutions.com</a> &nbsp; <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> &nbsp; <a href="tel:1+6024196893" class="hyperlinkReverseColors">602.419.6893</a></h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <asp:Label ID="labelName" runat="server" Text="*Name:" for="usr" CssClass="formBlue"></asp:Label>
-                            <asp:TextBox ID="textboxName" runat="server" MaxLength="75" placeholder="first and last name" CssClass="form-control"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="textboxName" ErrorMessage="A name is required." ValidationGroup="vsMessage" SetFocusOnError="true" CssClass="errorMessage" Display="None"></asp:RequiredFieldValidator>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <asp:Label ID="labelName" runat="server" Text="*Name:" for="usr" CssClass="formBlue"></asp:Label>
+                                <asp:TextBox ID="textboxName" runat="server" MaxLength="75" placeholder="first and last name" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="textboxName" ErrorMessage="* Name is required" ValidationGroup="vsMessage" SetFocusOnError="true" CssClass="errorMessage" Display="Static"></asp:RequiredFieldValidator>
+                            </div>
+                            <div class="col-md-6">
+                                <asp:Label ID="labelCompany" runat="server" Text="Company:" for="usr" CssClass="formBlue"></asp:Label>
+                                <asp:TextBox ID="textboxCompany" runat="server" MaxLength="75" placeholder="company name if applicable" CssClass="form-control"></asp:TextBox>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <asp:Label ID="labelCompany" runat="server" Text="Company:" for="usr" CssClass="formBlue"></asp:Label>
-                            <asp:TextBox ID="textboxCompany" runat="server" MaxLength="75" placeholder="company name if applicable" CssClass="form-control"></asp:TextBox>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <asp:Label ID="labelEmail" runat="server" Text="*Email:" for="usr" CssClass="formBlue"></asp:Label>
+                                <asp:TextBox ID="textboxEmail" runat="server" MaxLength="75" placeholder="email address" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="textboxEmail" ErrorMessage="* An email address is required." ValidationGroup="vsMessage" SetFocusOnError="true" CssClass="errorMessage" Display="Dynamic"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="textboxEmail" ErrorMessage="* Invalid email" ValidationGroup="vsMessage" SetFocusOnError="true" CssClass="errorMessage" Display="Static" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                            </div>
+                            <div class="col-md-6">
+                                <asp:Label ID="labelTelephone" runat="server" Text="Phone Number:" CssClass="formBlue"></asp:Label>
+                                <asp:TextBox ID="textboxPhone" runat="server" MaxLength="75" placeholder="telephone number" CssClass="form-control"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="revPhone" runat="server" ControlToValidate="textboxPhone" ErrorMessage="* Invalid phone number" ValidationGroup="vsMessage" SetFocusOnError="true" CssClass="errorMessage" Display="Static" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"></asp:RegularExpressionValidator>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <asp:Label ID="labelEmail" runat="server" Text="*Email:" for="usr" CssClass="formBlue"></asp:Label>
-                            <asp:TextBox ID="textboxEmail" runat="server" MaxLength="75" placeholder="email address" CssClass="form-control"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="textboxEmail" ErrorMessage="An email address is required." ValidationGroup="vsMessage" SetFocusOnError="true" CssClass="errorMessage" Display="None"></asp:RequiredFieldValidator>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <asp:Label ID="labelComment" runat="server" Text="*Comment or Question:" CssClass="formBlue"></asp:Label>
+                                <asp:TextBox ID="textboxComment" runat="server" TextMode="MultiLine" Rows="5" CssClass="form-control" placeholder="Please submit your comments or questions"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvComment" runat="server" ControlToValidate="textboxComment" ErrorMessage="* A comment or question is required" SetFocusOnError="true" ValidationGroup="vsMessage" CssClass="errorMessage" Display="Static"></asp:RequiredFieldValidator>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <asp:Label ID="labelTelephone" runat="server" Text="Phone Number:" CssClass="formBlue"></asp:Label>
-                            <asp:TextBox ID="textboxPhone" runat="server" MaxLength="75" placeholder="telephone number" CssClass="form-control"></asp:TextBox>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <asp:Label ID="labelComment" runat="server" Text="*Comment or Question:" CssClass="formBlue"></asp:Label>
-                            <asp:TextBox ID="textboxComment" runat="server" TextMode="MultiLine" Rows="5" CssClass="form-control" placeholder="Please submit your comments or questions"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="rfvComment" runat="server" ControlToValidate="textboxComment" ErrorMessage="A comment or question is required." SetFocusOnError="true" ValidationGroup="vsMessage" CssClass="errorMessage" Display="None"></asp:RequiredFieldValidator>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <asp:ValidationSummary ID="vsMessage" runat="server" DisplayMode="List" ShowValidationErrors="true" CssClass="errorMessage" ValidationGroup="vsMessage" />
-                            <asp:Button ID="buttonSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="buttonSubmit_Click" ValidationGroup="vsMessage" />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <%--<asp:ValidationSummary ID="vsMessage" runat="server" DisplayMode="List" ShowValidationErrors="true" CssClass="errorMessage" ValidationGroup="vsMessage" HeaderText="Validation Errors:" />--%>
+                                <asp:Button ID="buttonSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="buttonSubmit_Click" ValidationGroup="vsMessage" />
+                            </div>
                         </div>
                     </div>
                     <div class="row">
