@@ -64,7 +64,7 @@ footer {
 
 /* Custom Header/Menu */
 .navbar-inverse {
-    background-color: rgba(255, 255, 255, 0.58);
+    background-color: rgba(255, 255, 255, 0.72);
     border-color: transparent;
     height: 55px;
 }
@@ -132,14 +132,14 @@ input.form-control {
 }
 
 input.btn-primary {
-    background-color: #31708E;
-    border-color: #687864;
+    background-color: #222F5B;
+    border-color: #31708E;
     margin-top: 15px;
 }
 
 input.btn-primary:hover {
-    background-color: #687864;
-    border-color: #31708E;
+    background-color: #31708E;
+    border-color: #222F5B;
 }
 /* */
 /* Custom CSS classes added to the Project */
@@ -188,13 +188,14 @@ ul.checkMark li {
 
 ul.checkMark li:before {
     /*Using a Bootstrap glyphicon as the bullet point*/
-    content: "\e013";
+    content: "\e084";
     font-family: 'Glyphicons Halflings';
     font-size: 11px;
     float: left;
     margin-top: 4px;
     margin-left: -17px;
-    color: #687864;
+    /*color: #687864;*/
+    color: #222F5B;
 }
 
 /* Custom Anchor Position */
@@ -219,10 +220,11 @@ a.anchor {
 }
 
 .thankyouMessage {
-    color: #333;
-    font-size: 1.25em;
-    padding-top: 20px;
-    font-weight: 600;
+    color: #31708E;
+    font-size: 2.85em;
+    padding-top: 30px;
+    font-family: 'Satisfy', cursive;
+    font-style: italic;
 }
 
 a.hyperlinkReverseColors {

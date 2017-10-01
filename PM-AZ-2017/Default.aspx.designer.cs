@@ -13,15 +13,6 @@ namespace PM_AZ_2017 {
     public partial class _Default {
         
         /// <summary>
-        /// contactForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl contactForm;
-        
-        /// <summary>
         /// labelName control.
         /// </summary>
         /// <remarks>

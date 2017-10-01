@@ -13,10 +13,11 @@
         });
 
         function scrollToBottom() {
-            document.getElementsByClassName('thankyouMessage')[0].scrollIntoView(false);
-            //document.getElementById('imgicon').scrollIntoView(false);
-            //elmnt.scrollIntoView(true); // Bottom
+            var myform = document.getElementById('contactForm');
+            myform.style.display = 'none';
+            window.scrollTo(0, document.body.scrollHeight);
         }
+
     </script>
 
     <div><br /></div>
@@ -153,7 +154,7 @@
         <div class="row grey-stripe">
             <div class="narrowMargin">
                 <div class="col-md-8">
-                    <div id="contactForm" runat="server">
+                    <div id="contactForm"> <%--<runat="server">--%>
                         <div class="row">
                             <div class="col-md-12">
                                 <h4>Peter Martinez &nbsp; <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> &nbsp; <a href="mailto:peter@gb2gitsolutions.com" class="hyperlinkReverseColors">peter@gb2gitsolutions.com</a> &nbsp; <span class="glyphicon glyphicon-minus" aria-hidden="true"></span> &nbsp; <a href="tel:1+6024196893" class="hyperlinkReverseColors">602.419.6893</a></h4>
@@ -179,14 +180,14 @@
                             </div>
                             <div class="col-md-6">
                                 <asp:Label ID="labelTelephone" runat="server" Text="Phone Number:" CssClass="formBlue"></asp:Label>
-                                <asp:TextBox ID="textboxPhone" runat="server" MaxLength="75" placeholder="telephone number" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="textboxPhone" runat="server" MaxLength="75" placeholder="555-555-5555" CssClass="form-control"></asp:TextBox>
                                 <asp:RegularExpressionValidator ID="revPhone" runat="server" ControlToValidate="textboxPhone" ErrorMessage="* Invalid phone number" ValidationGroup="vsMessage" SetFocusOnError="true" CssClass="errorMessage" Display="Static" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"></asp:RegularExpressionValidator>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <asp:Label ID="labelComment" runat="server" Text="*Comment or Question:" CssClass="formBlue"></asp:Label>
-                                <asp:TextBox ID="textboxComment" runat="server" TextMode="MultiLine" Rows="5" CssClass="form-control" placeholder="Please submit your comments or questions"></asp:TextBox>
+                                <asp:TextBox ID="textboxComment" runat="server" TextMode="MultiLine" Rows="5" CssClass="form-control" placeholder="Your comments or questions"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvComment" runat="server" ControlToValidate="textboxComment" ErrorMessage="* A comment or question is required" SetFocusOnError="true" ValidationGroup="vsMessage" CssClass="errorMessage" Display="Static"></asp:RequiredFieldValidator>
                             </div>
                         </div>
@@ -198,7 +199,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12" id="thankYou">
                             <asp:Literal ID="literalThankYou" runat="server"></asp:Literal>
                         </div>
                     </div>
