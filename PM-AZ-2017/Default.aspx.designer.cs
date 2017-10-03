@@ -13,6 +13,24 @@ namespace PM_AZ_2017 {
     public partial class _Default {
         
         /// <summary>
+        /// literalCareerBackground control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal literalCareerBackground;
+        
+        /// <summary>
+        /// literalCareerObjectives control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal literalCareerObjectives;
+        
+        /// <summary>
         /// labelName control.
         /// </summary>
         /// <remarks>
@@ -164,5 +182,14 @@ namespace PM_AZ_2017 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal literalThankYou;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

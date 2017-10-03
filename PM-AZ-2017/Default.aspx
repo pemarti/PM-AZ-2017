@@ -41,14 +41,10 @@
                     <a name="About" class="anchor"></a> <h1>About</h1>
                 </div>
                 <div class="col-md-8">
-                    <h3>Background</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dignissim nisi, eget mollis dolor. Vivamus non erat nec nulla congue sollicitudin quis et elit. Sed mattis lorem purus, id aliquet dui accumsan non. Morbi gravida massa quis felis mollis hendrerit. Vivamus pulvinar turpis ut tempus sodales. Etiam sed mauris feugiat, rutrum orci nec, faucibus ante. Vestibulum pharetra vitae tortor non rutrum. Proin tellus massa, scelerisque ac elit nec, porttitor eleifend urna.
-                    </p>
-                    <h3>Objectives</h3>
-                    <p>
-                        Aliquam sodales tempor ex, nec feugiat diam iaculis in. Sed ut nunc id lectus fermentum scelerisque. Curabitur tristique justo sit amet augue condimentum, vel ultricies ante porttitor. Nulla id nulla mattis dolor interdum posuere. Nullam sed faucibus enim. Maecenas eleifend nibh id dolor vehicula ornare. Vestibulum ac consequat mi. Nam convallis maximus urna, in eleifend elit euismod vitae. Donec sit amet diam nisl. In hac habitasse platea dictumst. Etiam lobortis eget erat non condimentum. Maecenas malesuada justo vel dolor rhoncus tincidunt.
-                    </p>
+                    <h3>Career Background</h3>
+                    <asp:Literal ID="literalCareerBackground" runat="server" Visible="true"></asp:Literal>
+                    <h3>Career Objectives</h3>
+                    <asp:Literal ID="literalCareerObjectives" runat="server" Visible="true"></asp:Literal>
                 </div>
             </div>
         </div>
@@ -206,6 +202,7 @@
                 </div>
                 <div class="col-md-4" style="text-align: right;">
                     <a name="Contact" class="anchor"></a><h1>Contact</h1>
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
                 </div>
             </div>
         </div>

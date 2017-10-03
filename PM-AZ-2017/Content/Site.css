@@ -94,6 +94,7 @@ h1 {
     color: #222F5B;
     font-family: 'Crete Round', serif;
     text-transform: uppercase;
+    text-shadow: 2px 2px rgba(49, 112, 142, 0.81);
 }
 
 h1::first-letter {

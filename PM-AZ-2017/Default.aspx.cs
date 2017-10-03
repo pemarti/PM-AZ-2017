@@ -8,6 +8,7 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Web.Configuration;
 using System.Data;
+using System.IO;
 
 namespace PM_AZ_2017
 {
@@ -15,6 +16,10 @@ namespace PM_AZ_2017
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Display the topic under About
+            displayTopic();
+
+            // Hide thank you for new users
             if (!Page.IsPostBack)
                 literalThankYou.Visible = false;
         }
@@ -27,7 +32,7 @@ namespace PM_AZ_2017
                 string strName = textboxName.Text;
                 string strCompany = textboxCompany.Text;
                 string strEmail = textboxEmail.Text;
-                string strPhone = textboxPhone.Text;
+                string strPhone = textboxPhone.Text.Replace("-", "").Replace("(", "").Replace(")", "");
                 string strComment = textboxComment.Text;
                 int intCommentID = 0;
                 int intNewCommentID = 0;
@@ -104,8 +109,56 @@ namespace PM_AZ_2017
             sbThankYou.Append("</div>");
             literalThankYou.Text = sbThankYou.ToString();
             literalThankYou.Visible = true;
-            //contactForm.Visible = false;
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "scrollToBottom()", true);
+        }
+
+        private void displayTopic()
+        {
+            var topicList = new List<Topic>();
+
+            topicList.Add(new Topic
+            {
+                TopicID = 0,
+                Title = "Career Background",
+                FileName = "TextFiles/CareerBackground.txt",
+                ControlName = "literalCareerBackground",
+                Category = "About"
+            });
+
+            topicList.Add(new Topic
+            {
+                TopicID = 1,
+                Title = "Career Objectives",
+                FileName = "TextFiles/CareerObjectives.txt",
+                ControlName = "literalCareerObjectives",
+                Category = "About"
+            });
+
+            foreach (var rec in topicList)
+            {
+                string path = Server.MapPath(Convert.ToString(rec.FileName));
+                using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
+                {
+                    using (TextReader tr = new StreamReader(fs))
+                    {
+                        ContentPlaceHolder maincontent = (ContentPlaceHolder)this.Master.FindControl("MainContent");
+                        if (maincontent != null)
+                        {
+                            Literal literal = (Literal)maincontent.FindControl(rec.ControlName);
+                            if (literal != null)
+                                //literalCareerObjectives.Text = "You found it.";
+                                literal.Text = tr.ReadToEnd();
+                            else
+                                literalCareerObjectives.Text = "No such luck.";
+                        }
+                        else
+                            literalCareerObjectives.Text = "No such luck.";
+
+
+                    }
+                }
+            }
+
         }
     }
 }

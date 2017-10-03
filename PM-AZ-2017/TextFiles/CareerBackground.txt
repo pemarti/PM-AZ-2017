@@ -1,0 +1,18 @@
+﻿<p>
+    Having lived in Arizona since the mid 1970's, I essentially feel like an Arizona native.  I grew up living in the east valley, which is not very east due anymore due to how much the greater Phoenix area has grown in the last forty years, and reside there now.
+</p>
+<p>
+    I graduated from Arizona State University with a BS in Geography.  In my final semester at ASU, I completed an internship with the Arizona State Land Department working with Geographic Information Systems.  It was in working with their GIS staff, their “state of the art” Unix work station, and the “exotic” electrostatic printer, that sparked my interest in GIS and computers.
+</p>
+<p>
+    After completing my internship with the State, I enrolled at Northern Arizona University, where they offered an MA in Geography with an emphasis in Geographic Data Management.  While attending NAU, I completed an internship with the City of Flagstaff working in their GIS group.  Following the internship, I was hired as a GIS Technician and eventually worked my way up to being a GIS Programmer.
+</p>
+<p>
+    My wife and I loved living in Flagstaff and enjoyed many of the outdoor activities available in the beautiful surroundings.  Day trips to near-by sites, mountain biking, hiking, and exploring were some of our favorite activities.
+</p>
+<p>
+    After about five years in Flagstaff, we moved back down to the Valley where I worked for, then Dames & Moore, and later URS Corporation.  I worked with URS for almost 14 years, starting as a GIS Analyst and eventually becoming the Group Leader for the GeoVis Group, which was comprised of four teams; Database and Programming, Graphics, Visual Simulations, and GIS.
+</p>
+<p>
+    After taking a one-year hiatus, I started an IT consulting business, <a href="https://gb2gitsolutions.com" target="_blank">GB2G IT Solutions</a>.  GB2G IT Solutions specializes in providing small companies and organizations with custom web and data management solutions.  As the owner and usually sole employee of GB2G IT Solutions, I’ve had the opportunity to develop a wide range of web solutions ranging from simple websites to database driven and web enabled applications for multiple users.
+</p>

@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Crete+Round|Dosis|Satisfy" rel="stylesheet">
 </head>
 <body>
-    <form runat="server">
+    <form id="form1" runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
