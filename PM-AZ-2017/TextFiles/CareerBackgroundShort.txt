@@ -1,0 +1,6 @@
+﻿<p>
+	Having lived in Arizona since the mid 1970's, I essentially feel like an Arizona native.  I grew up living in the east valley, which is not very east due anymore due to how much the greater Phoenix area has grown in the last forty years, and reside there now.
+</p>
+<p>
+	I graduated from Arizona State University with a BS in Geography.  In my final semester at ASU, I completed an internship with the Arizona State Land Department working with Geographic Information Systems.  It was in working with their GIS staff, their “state of the art” Unix work station, and the “exotic” electrostatic printer, that sparked my interest in GIS and computers.
+</p>

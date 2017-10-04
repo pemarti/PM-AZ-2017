@@ -120,43 +120,67 @@ namespace PM_AZ_2017
             {
                 TopicID = 0,
                 Title = "Career Background",
-                FileName = "TextFiles/CareerBackground.txt",
+                Category = "About",
                 ControlName = "literalCareerBackground",
-                Category = "About"
+                BaseFileName = "CareerBackground",
+                TextDisplay ="careerBackground"
             });
 
             topicList.Add(new Topic
             {
                 TopicID = 1,
                 Title = "Career Objectives",
-                FileName = "TextFiles/CareerObjectives.txt",
+                Category = "About",
                 ControlName = "literalCareerObjectives",
-                Category = "About"
+                BaseFileName = "CareerObjectives",
+                TextDisplay = "careerObjectives"
             });
 
+            StringBuilder sb = new StringBuilder();
             foreach (var rec in topicList)
             {
-                string path = Server.MapPath(Convert.ToString(rec.FileName));
-                using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
+                sb.Clear();
+                ContentPlaceHolder maincontent = (ContentPlaceHolder)this.Master.FindControl("MainContent");
+                if (maincontent != null)
                 {
-                    using (TextReader tr = new StreamReader(fs))
+                    Literal literal = (Literal)maincontent.FindControl(rec.ControlName);
+                    if (literal != null)
                     {
-                        ContentPlaceHolder maincontent = (ContentPlaceHolder)this.Master.FindControl("MainContent");
-                        if (maincontent != null)
+                        // The control was found print the short profile";
+                        sb.Append("<div id=\"div" + rec.TextDisplay + "short\" >");
+                        string path = Server.MapPath(Convert.ToString("TextFiles/" + rec.BaseFileName + "Short.txt"));
+                        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
                         {
-                            Literal literal = (Literal)maincontent.FindControl(rec.ControlName);
-                            if (literal != null)
-                                //literalCareerObjectives.Text = "You found it.";
-                                literal.Text = tr.ReadToEnd();
-                            else
-                                literalCareerObjectives.Text = "No such luck.";
+                            using (TextReader tr = new StreamReader(fs))
+                            {
+                                sb.Append(tr.ReadToEnd());
+                            }
                         }
-                        else
-                            literalCareerObjectives.Text = "No such luck.";
+                        sb.Append("<button id=\"button" + rec.TextDisplay + "short\" class=\"btn btn-primary\" data-toggle=\"collapse\" onclick=\"longshortView('"+ rec.TextDisplay + "', 'short')\" %>Show More +</button>");
+                        sb.Append("</div>");
 
+                        // Print the long profile";
+                        sb.Append("<div id=\"div" + rec.TextDisplay + "long\" style=\"display: none;\" >");
+                        path = Server.MapPath(Convert.ToString("TextFiles/" + rec.BaseFileName + "Long.txt"));
+                        using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
+                        {
+                            using (TextReader tr = new StreamReader(fs))
+                            {
+                                sb.Append(tr.ReadToEnd());
+                            }
+                        }
+                        sb.Append("<button id=\"button" + rec.TextDisplay + "long\" class=\"btn btn-primary\" data-toggle=\"collapse\" onclick=\"longshortView('" + rec.TextDisplay + "', 'long')\" %>Show Less -</button>");
+                        sb.Append("</div>");
+                        literal.Text = sb.ToString();
 
                     }
+                    else
+                        // No control found
+                        literalCareerObjectives.Text = "";
                 }
+                else
+                    // No control found
+                    literalCareerObjectives.Text = "";
             }
 
         }

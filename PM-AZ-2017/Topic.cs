@@ -9,8 +9,9 @@ namespace PM_AZ_2017
     {
         public int TopicID { get; set; }
         public string Title { get; set; }
-        public string FileName { get; set; }
-        public string ControlName { get; set; }
         public string Category { get; set; }
+        public string ControlName { get; set; }
+        public string TextDisplay { get; set; }
+        public string BaseFileName { get; set; }
     }
 }

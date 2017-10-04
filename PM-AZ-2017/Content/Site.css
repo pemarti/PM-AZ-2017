@@ -15,7 +15,8 @@ body {
 p {
     font-family: Dosis, sans-serif;
     color: #333;
-    font-size: 1.25em;
+    font-size: 1.45em;
+    padding-bottom: 15px;
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
@@ -125,6 +126,13 @@ h4 {
     margin-bottom: 25px;
 }
 
+h5 {
+    color: #222F5B;
+    font-family: 'Crete Round', serif;
+    font-size: 1.35em;
+    margin-top: 20px;
+}
+
 
 /* Form Controls */
 input.form-control {
@@ -142,9 +150,19 @@ input.btn-primary:hover {
     background-color: #31708E;
     border-color: #222F5B;
 }
+
+ul li {
+    display: block;
+    padding: 5px;
+    font-size: 1.15em;
+    text-decoration: none;
+    list-style: none;
+}
+
 /* */
 /* Custom CSS classes added to the Project */
 /* */
+
 h1.underlinedScript {
     /*color: #222F5B;*/
     color: #31708E;
@@ -185,6 +203,8 @@ h3.underlinedScript {
 /* Custom List - Checkmarks*/
 ul.checkMark li {
     display:block;
+    padding: 5px;
+    font-size: 1.15em;
 }
 
 ul.checkMark li:before {
@@ -237,3 +257,13 @@ a.hyperlinkReverseColors:hover {
     color: #31708E;
 }
 
+span.keyHeading {
+    font-size: 1.21em;
+    font-weight:600;
+}
+
+span.keyPoint {
+    font-size: 1.11em;
+    font-weight: 500;
+    font-style: italic;
+}

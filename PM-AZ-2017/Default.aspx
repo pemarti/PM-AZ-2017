@@ -17,8 +17,9 @@
             myform.style.display = 'none';
             window.scrollTo(0, document.body.scrollHeight);
         }
-
     </script>
+
+    <script src="Scripts/Custom/longshortDisplay.js"></script>
 
     <div><br /></div>
     <div class="parallax-window" data-parallax="scroll" data-image-src="/Graphics/Images/sky-414199.jpg">
@@ -53,13 +54,22 @@
             <div class="narrowMargin">
                 <div class="col-md-8">
                     <h3>Northern Arizona Univesity</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dignissim nisi, eget mollis dolor. Vivamus non erat nec nulla congue sollicitudin quis et elit. Sed mattis lorem purus, id aliquet dui accumsan non. Morbi gravida massa quis felis mollis hendrerit. Vivamus pulvinar turpis ut tempus sodales. Etiam sed mauris feugiat, rutrum orci nec, faucibus ante. Vestibulum pharetra vitae tortor non rutrum. Proin tellus massa, scelerisque ac elit nec, porttitor eleifend urna.
-                    </p>
+                    <h5>
+                        Master of Arts <span ></span> 1997
+                    </h5>
+                    <ul class="checkMark">
+                        <li>Major: Geography</li>
+                        <li>Emphasis: Geographic Information Management</li>
+                        <li>Thesis: Implementing GIS in Local Government, Theoretical Models and the Experience of Flagstaff, Arizona</li>
+                    </ul>
                     <h3>Arizona State University</h3>
-                    <p>
-                        Aliquam sodales tempor ex, nec feugiat diam iaculis in. Sed ut nunc id lectus fermentum scelerisque. Curabitur tristique justo sit amet augue condimentum, vel ultricies ante porttitor. Nulla id nulla mattis dolor interdum posuere. Nullam sed faucibus enim. Maecenas eleifend nibh id dolor vehicula ornare. Vestibulum ac consequat mi. Nam convallis maximus urna, in eleifend elit euismod vitae. Donec sit amet diam nisl. In hac habitasse platea dictumst. Etiam lobortis eget erat non condimentum. Maecenas malesuada justo vel dolor rhoncus tincidunt.
-                    </p>
+                    <h5>
+                        Bachelor of Science <span></span> 1991
+                    </h5>
+                    <ul class="checkMark">
+                        <li>Major: Geography</li>
+                        <li>Emphasis: Environmental Geography</li>
+                    </ul>
                 </div>
                 <div class="col-md-4 lightblueBackground" style="text-align: right;">
                     <a name="Education" class="anchor"></a><h1>Education</h1>
@@ -74,16 +84,52 @@
                 </div>
                 <div class="col-md-8">
                     <h3>GB2G IT Solutions, LLC</h3>
+                    <h5>2013 - Present</h5>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dignissim nisi, eget mollis dolor. Vivamus non erat nec nulla congue sollicitudin quis et elit. Sed mattis lorem purus, id aliquet dui accumsan non. Morbi gravida massa quis felis mollis hendrerit. Vivamus pulvinar turpis ut tempus sodales. Etiam sed mauris feugiat, rutrum orci nec, faucibus ante. Vestibulum pharetra vitae tortor non rutrum. Proin tellus massa, scelerisque ac elit nec, porttitor eleifend urna.
+                        GB2G IT Solutions was started in February of 2013.  GB2G IT Solutions specializes in providing custom web and data management solutions to small businesses, organizations, and individuals.  Operating a small business is a great way to appreciate how all the different functions of a business must come together in order to succeed.
+                    </p>
+                    <p>
+                        In running GB2G for the past four years, I have to be very grateful for all the project managment training that I received during my years at URS Corporation.  URS trained project managers like myself through a formal training and certification process that included client communications, contracting (we always collaborated with the Company's attorneies), producing cost estimates, runing a project, invoicing, hiring and dismissing staff (when absolutely necessary), etc.  All that training and experience was invaluable to starting and running a business.
+                    </p>
+                    <p>
+                        GB2G IT Solutions is owned and operated by me, that means wearing many different hats and taking on all the responsibility. There were several tools that made managing the operation a little easier, one was using UpWork to interview and hire hiring freelancers when a particular expertise was needed or the work was too much for me to complete in a given time frame.  Another tool or technique was using WeWorked to maintain detailed records of what work was done on what job; it even became a requirement for freelancers working on GB2G projects.
                     </p>
                     <h3>URS Corporation</h3>
+                    <h5>1998 - 2012</h5>
                     <p>
-                        Aliquam sodales tempor ex, nec feugiat diam iaculis in. Sed ut nunc id lectus fermentum scelerisque. Curabitur tristique justo sit amet augue condimentum, vel ultricies ante porttitor. Nulla id nulla mattis dolor interdum posuere. Nullam sed faucibus enim. Maecenas eleifend nibh id dolor vehicula ornare. Vestibulum ac consequat mi. Nam convallis maximus urna, in eleifend elit euismod vitae. Donec sit amet diam nisl. In hac habitasse platea dictumst. Etiam lobortis eget erat non condimentum. Maecenas malesuada justo vel dolor rhoncus tincidunt.
+                        URS Corporation, now a part of AECOM, is an international Fortune 500 company. URS Corporation organized much of their work using business lines to form virtual groups, and maintained an open network of offices that collaborated on projects across these many disciplines. This was the perfect scenario in which to provide robust IT solutions on a multitude of projects; project location primarily in the Southwest but also around the world.
+                    </p>
+                    <p>
+                        While at URS the Teams and Groups that I worked with provided Geographic Information System (GIS), database and programming, visual simulations, and graphics support to many projects and clients. On larger projects we build project portals, these portals included:
+                    </p>
+                        <ul>
+                            <li>File repositories</li>
+                            <li>Document management systems</li>
+                            <li>Comment tracking (sometimes for 10's of thousands of comments) </li>
+                            <li>Contact lists for stake holders and project staff</li>
+                            <li>GIS web mapping</li>
+                            <li>User controlled environment with distinct user levels</li>
+                        </ul>
+                    <p>
+                    <p>
+                        These project portals and other applications were built using MS Server, MS SQL Server, ASP.Net (initially classic ASP), and ArcIMS (initially MapObjects IMS).
+                    </p>
+                    <p>
+                        During the years that I was with URS, we designed, developed and maintained the software, applications, and databases we used to provide web services.  We also identified requirements, purchased and maintained the servers we used for web services in our local office; our firewall and internet security was managed through another office tasked with providing security.
                     </p>
                     <h3>City of Flagstaff, Arizona</h3>
+                    <h5>1994 - 1998</h5>
                     <p>
-                        Aliquam sodales tempor ex, nec feugiat diam iaculis in. Sed ut nunc id lectus fermentum scelerisque. Curabitur tristique justo sit amet augue condimentum, vel ultricies ante porttitor. Nulla id nulla mattis dolor interdum posuere. Nullam sed faucibus enim. Maecenas eleifend nibh id dolor vehicula ornare. Vestibulum ac consequat mi. Nam convallis maximus urna, in eleifend elit euismod vitae. Donec sit amet diam nisl. In hac habitasse platea dictumst. Etiam lobortis eget erat non condimentum. Maecenas malesuada justo vel dolor rhoncus tincidunt.
+                        My work at the City of Flagstaff began with an internship which lead to a full-time position as a GIS Technician. During my time at the City I acquired a very solid foundation and understanding of GIS principles. Among other endeavors, we were building the cadastral layer on a custom control grid developed by the City’s Survey Group. To build the City's parcel layer we utilized Coordinate Geometry to enter each parcel, this afforded us a very precise base layer on which to build exceptionally accurate maps.
+                    </p>
+                    <p>
+                        As my time at the City went on, I began assisting in the development of significant application for different departments and was promoted to GIS Programmer. We build custom applications to facilitate data entry forms for various departments including Utilities, Planning, Fire, and Survey.
+                    </p>
+                    <p>
+                        The GIS software applications used by the City were all built on ESRI products. The programming languages were ArcInfo's AML, INFO, and ArcView's Avenue.
+                    </p>
+                    <p>
+                        While at the City, I also assisted in regular Unix software updates, and hardware upgrades.
                     </p>
                 </div>
             </div>
@@ -94,11 +140,42 @@
                 <div class="col-md-8">
                     <h3>Typical Database Application Project</h3>
                     <p>
-                        Aliquam sodales tempor ex, nec feugiat diam iaculis in. Sed ut nunc id lectus fermentum scelerisque. Curabitur tristique justo sit amet augue condimentum, vel ultricies ante porttitor. Nulla id nulla mattis dolor interdum posuere. Nullam sed faucibus enim. Maecenas eleifend nibh id dolor vehicula ornare. Vestibulum ac consequat mi. Nam convallis maximus urna, in eleifend elit euismod vitae. Donec sit amet diam nisl. In hac habitasse platea dictumst. Etiam lobortis eget erat non condimentum. Maecenas malesuada justo vel dolor rhoncus tincidunt.
+                        Based on experience, as much as possible, a project needs to begin with a clear goal and agreed to expectations. This involves careful listening to the client.
                     </p>
+                    <p>
+                          The next step is to convert the ideas into illustrations or materials that can be shared and discussed.  Once the ideas are established then the application can be designed and a schedule can be established.
+                    </p>
+                    <p>
+                        A typical database application will also includes defining specific key attributes.  These include but are not limited to the following.
+                    </p>
+                    <span class="keyHeading">Key Attributes to Identify:</span>
+                    <ul>
+                        <li><span class="keyPoint">Specific functions</span></li>
+                        <li><span class="keyPoint">Output - reports or files</span></li>
+                        <li><span class="keyPoint">User permissions</span></li>
+                        <li><span class="keyPoint">Intended usage</span></li>
+                        <li><span class="keyPoint">Key data elements</span></li>
+                    </ul>
+                    <span class="keyHeading">Significant Steps in Developing, Deploying and Maintaining the Application</span>
+                    <ul>
+                        <li><span class="keyPoint">Database design</span>, built to accomodate the data requirements identified by the client, with a goal towards eliminating data redundancie, potential growth, but limiting unnecessary complexity.</li>
+                        <li><span class="keyPoint">Server environment and the server software</span>, selected based on the needs of the application and if applicable, the client's preference.</li>
+                        <li><span class="keyPoint">Authentication</span> used to limit access to the system's back-end and assign roles to users.</li>
+                        <li><span class="keyPoint">Web framework</span> such as bootstrap is used to assure that the application is mobile friendly.</li>
+                        <li><span class="keyPoint">Application layout</span> position controls and functions in an intuitive manner so that reports, date entry forms, and administrative functions are grouped by theme, work flow or both.  Attention to detail here provides a better user experience (UX).</li>
+                        <li><span class="keyPoint">Application testing and deployment</span> test, test again, and test yet again.  Compare resutls from the application reports to straight database queries.</li>
+                        <li><span class="keyPoint">The application is maintained</span> make time to respond quickly to any issues that arise.  Keep a bug tracking system. </li>
+                    </ul>
+
                     <h3>Typical Simple Website Project</h3>
                     <p>
-                        Aliquam sodales tempor ex, nec feugiat diam iaculis in. Sed ut nunc id lectus fermentum scelerisque. Curabitur tristique justo sit amet augue condimentum, vel ultricies ante porttitor. Nulla id nulla mattis dolor interdum posuere. Nullam sed faucibus enim. Maecenas eleifend nibh id dolor vehicula ornare. Vestibulum ac consequat mi. Nam convallis maximus urna, in eleifend elit euismod vitae. Donec sit amet diam nisl. In hac habitasse platea dictumst. Etiam lobortis eget erat non condimentum. Maecenas malesuada justo vel dolor rhoncus tincidunt.
+                        Sometimes called static websites, most really are not these days they're based on powerful Content Management Systems, are much easier to develop, deploy, and maintain than a custom data managaement solution.  Unless the client specifies a particular preference, I usually use WordPress for less complex websites and use .Net web sites for more complex undertakings.
+                    </p>
+                    <p>
+                        I enjoy working in different environments, and always try to match the technoloy to the need and not the other way around.  I very much enjoy learning and experimenting with new technologies.
+                    </p>
+                    <p>
+                          One area that I am not well versed in is SEO and Google Analytics, a very important part of business websites today.  I am acustomed to thoroughly labeling names, captions, titles, etc. appropriately.  I create site maps, register sites with Google, etc, but that's about the extent to which I implement SEO.
                     </p>
                 </div>
                 <div class="col-md-4" style="text-align: right;">

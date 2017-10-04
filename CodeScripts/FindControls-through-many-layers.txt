@@ -1,0 +1,65 @@
+literalCareerBackground
+literalCareerBackground
+literalCareerBackground
+literalCareerBackground
+literalCareerObjectives
+
+
+                        //this.Controls["literalCareerBackground"].ID = 
+
+
+                        // Find control on page.
+                        //Control myControl1 = 
+                        //Literal myliteral = ((Literal)FindControl("literalCareerBackground"));
+                        //Control myControl1 = FindControl("literalCareerBackground");
+
+                        //if (myliteral != null)
+                        //{
+                        // Get control's parent.
+                        //Control mycontrol = myliteral.Parent;
+                        //Response.Write("Parent of the literal is : " + mycontrol.ID + "<br />");
+                        //}
+                        //else
+                        //{
+                        //Response.Write("Control not found<br />");
+                        //}
+
+                        //Literal lit = Page.Master.FindControl("literalCareerBackground").Controls.OfType<Literal>();
+                        //Literal literal = (Literal)this.Master.FindControl(Convert.ToString(rec.ControlName));
+                        //if (literal != null)
+                        //  literal.Text = content;
+
+
+
+            string allTextBoxValues = "";
+            foreach (Control c in Page.Controls)
+            {
+                if (c.ID != null)
+                allTextBoxValues += "At the first tier, control " + c.ID + " was found. <br />";
+
+                foreach (Control childc in c.Controls)
+                {
+                    if (childc.ID != null)
+                    allTextBoxValues += "At the second tier, control" + childc.ID + " was found. <br />";
+
+                    foreach (Control childchildc in childc.Controls)
+                    {
+                        if (childchildc.ID != null)
+                            allTextBoxValues += "At the third tier, control " + childchildc.ID + " was found. <br />";
+
+                        foreach (Control childchildchildc in childchildc.Controls)
+                        {
+                            if (childchildchildc.ID != null)
+                                allTextBoxValues += "At the fourth tier, control " + childchildchildc.ID + " was found. <br />";
+                        }
+                    }
+                }
+            }
+            if (allTextBoxValues != "")
+            {
+                literalCareerBackground.Text = allTextBoxValues;
+            }
+            else
+            {
+                literalCareerBackground.Text = "No controls found!";
+            }
